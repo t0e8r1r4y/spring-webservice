@@ -35,10 +35,6 @@ notifications:
     recipients:
       - 04canae81@gmail.com
 
-before_deploy:
-  - zip -r demo *
-  - mkdir -p deploy
-  - mv demo.zip deploy/springboot-mywebservice.zip
 
 deploy:
   - provider: s3
