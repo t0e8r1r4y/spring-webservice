@@ -1,0 +1,25 @@
+spring:
+  profiles:
+    active: local
+
+# local 환경
+---
+spring:
+  profiles: local
+
+  datasource:
+    url: jdbc:h2:mem:testdb
+    driverClassName: org.h2.Driver
+    username: sa
+    password:
+    data: classpath:data-h2.sql
+
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    show-sql: true
+    hibernate:
+      ddl-auto: create-drop
+
+  h2:
+    console:
+      enabled: true
