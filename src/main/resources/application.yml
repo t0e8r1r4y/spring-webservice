@@ -1,6 +1,6 @@
 spring:
   profiles:
-    active: set1
+    active: local
 
 # local 환경
 ---
