@@ -20,7 +20,7 @@ plugins {
 }
 
 group = 'com.pogoweb'
-version = '0.0.4-SNAPSHOT'
+version = '0.0.5-SNAPSHOT'
 sourceCompatibility = '11'
 
 configurations {
@@ -48,11 +48,4 @@ dependencies {
 
 tasks.named('test') {
 	useJUnitPlatform()
-}
-
-jar {
-//	manifest {
-//		attributes 'Main-Class': 'com.pogoweb.demo.DemoApplication'
-//	}
-	enabled = false
 }
