@@ -20,7 +20,7 @@ plugins {
 }
 
 group = 'com.pogoweb'
-version = '0.0.5-SNAPSHOT'
+version = '0.0.7-SNAPSHOT'
 sourceCompatibility = '11'
 
 configurations {
