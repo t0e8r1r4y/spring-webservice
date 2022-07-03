@@ -51,7 +51,8 @@ tasks.named('test') {
 }
 
 jar {
-	manifest {
-		attributes 'Main-Class': 'com.pogoweb.demo.DemoApplication'
-	}
+//	manifest {
+//		attributes 'Main-Class': 'com.pogoweb.demo.DemoApplication'
+//	}
+	enabled = false
 }
