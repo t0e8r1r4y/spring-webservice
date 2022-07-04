@@ -1,26 +1,27 @@
 spring:
   profiles:
-    active: local
+    active: local # 기본 환경 선택
+  jpa:
+    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
+    open-in-view: false
+    generate-ddl: true
+    show-sql: true
+    hibernate:
+      ddl-auto: create
+    properties:
+      hibernate:
+        format_sql: true
 
 # local 환경
 ---
 spring:
   profiles: local
-
   datasource:
-    url: jdbc:h2:mem:testdb
-    driverClassName: org.h2.Driver
-    username: sa
-    password:
-    data: classpath:data-h2.sql
-
+    data: classpath:data-h2.sql # 시작할때 실행시킬 script
   jpa:
-    database-platform: org.hibernate.dialect.H2Dialect
     show-sql: true
     hibernate:
       ddl-auto: create-drop
-
   h2:
     console:
       enabled: true
-

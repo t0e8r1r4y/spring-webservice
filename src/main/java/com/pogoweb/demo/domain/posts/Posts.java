@@ -3,10 +3,7 @@ package com.pogoweb.demo.domain.posts;
 import com.pogoweb.demo.domain.BaseTimeEntity;
 import lombok.*;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 @Getter
@@ -14,7 +11,7 @@ import javax.persistence.Id;
 public class Posts extends BaseTimeEntity {
 
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.AUTO) // add annotation option
     private Long id;
 
     @Column(length = 500, nullable = false)
